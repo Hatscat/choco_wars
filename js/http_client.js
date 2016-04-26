@@ -18,7 +18,7 @@ function post_req (url, data, cb) {
 
     xhr.onerror = function (err) {
         console.error("error:", err);
-    }
+    };
 
     xhr.onload = cb;
     xhr.send(data);
@@ -34,7 +34,7 @@ function get_req (url, data, cb) {
 
     xhr.onerror = function (err) {
         console.error("error:", err);
-    }
+    };
 
     xhr.onload = cb;
     xhr.send(null);

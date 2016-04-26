@@ -1,26 +1,25 @@
 "use strict"
 
-window.structure = {
+function get_structure () {
 
-    layers: [
-        {
-            name: "home",
-            id: 1,
-            background_color: "#eaa",
-            initial_x: 0,
-            initial_y: 0,
-            target_x: 0,
-            target_y: 0,
-            w: 1,
-            h: 1,
-            title: "Fric = Pognon",
-            sub_title: "Pognon = Fric",
-            buttons: [
+    return {
 
-            ]
-        }
+        layers: {
+            home: {
+                background_color: "#eaa",
+                x: 0,
+                y: 0,
+                w: 1,
+                h: 1,
+                title: "Choco Wars",
+                sub_title: "Pognon = Fric",
+                inputs: [
+                    new Button("home", 0.1, 0.7, 0.8, 0.2, "#eee", "#fff", "PLAY", login)
+                ]
+            }
 
-    ],
-    initial_layer_id: 1
+        },
+        layers_order: ["home", "strategy", "board", "performances", "map", "district"] 
 
-};
+    };
+}

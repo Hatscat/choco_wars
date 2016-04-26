@@ -9,4 +9,6 @@ function get_2d_ctx (canvas) {
     return ctx;
 }
 
+function button_sprite (w, h, color, text) {
 
+}
