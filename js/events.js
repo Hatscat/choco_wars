@@ -35,5 +35,6 @@ function on_resize () {
     window.W = visible_canvas.width = buffer_canvas.width = innerWidth;
     window.H = visible_canvas.height = buffer_canvas.height = innerHeight;
     window.ratio_wh = W / H;
+    window.min_size = Math.min(W, H);
 }
 
