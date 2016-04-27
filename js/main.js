@@ -5,7 +5,7 @@ onload = main;
 function main () {
     window.buffer_canvas = visible_canvas.cloneNode();
     window.visible_ctx = get_2d_ctx(visible_canvas);
-    window.buffer_ctx = get_2d_ctx(buffer_canvas);
+    window.ctx = get_2d_ctx(buffer_canvas);
     window.time = 0;
     window.on_resize_cbs = [];
     on_resize();
@@ -19,6 +19,7 @@ function main () {
     };
     window.struct = get_structure();
 
+    storage.load();
     init_events();
     loop(time);
 }

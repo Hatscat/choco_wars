@@ -2,7 +2,11 @@
 
 window.config = {
     font: "Arial",
-    font_size: 0.1,
-    api_url: "localhost"
+    title_font: "Impact",
+    font_size: 0.05,
+    title_font_size: 0.15,
+    api_url: "localhost",
+    ALIGN_H: 1,
+    ALIGN_V: 1 << 1
 
 };

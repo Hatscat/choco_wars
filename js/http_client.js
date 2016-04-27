@@ -16,11 +16,8 @@ function post_req (url, data, cb) {
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-    xhr.onerror = function (err) {
-        console.error("error:", err);
-    };
-
-    xhr.onload = cb;
+    xhr.onerror = on_req_error;
+    xhr.onload = on_req_load.bind(cb);
     xhr.send(data);
 }
 
@@ -32,10 +29,25 @@ function get_req (url, data, cb) {
 
     xhr.open("GET", url + (data ? "/" + data : ""), true);
 
-    xhr.onerror = function (err) {
-        console.error("error:", err);
-    };
-
-    xhr.onload = cb;
+    xhr.onerror = on_req_error;
+    xhr.onload = on_req_load.bind(cb);
     xhr.send(null);
 }
+
+function on_req_error (evnt) {
+    console.error("error:", evnt);
+}
+
+function on_req_load (evnt, success_cb, fail_cb) {
+    if (evnt.target.status == 200) {
+        if (success_cb)
+            success_cb(evnt.target.responseText);
+    } else {
+        console.error("req load error:", evnt.target.status, evnt.target.responseText);
+        if (fail_cb)
+            fail_cb(evnt.target.status, evnt.target.responseText);
+        else
+            alert("Http request error: " + evnt.target.status + "\n" + evnt.target.responseText);
+    }
+}
+

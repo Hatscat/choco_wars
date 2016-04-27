@@ -35,12 +35,18 @@ function is_point_left_of_line_AB (p, A, B) {
 	return (B.x - A.x) * (p.y - A.y) - (B.y - A.y) * (p.x - A.x) > 0;
 }
 
+function swap (array, i0, i1) {
+    var tmp0 = array[i0];
+    array[i0] = array[i1];
+    array[i1] = tmp0;
+}
+
 function shuffle (o) {
 	for (var j, x, i = o.length; i;) {
 		j = Math.random() * i | 0;
 		x = o[--i];
 		o[i] = o[j];
-		o[j] = x;    
+		o[j] = x;
 	}
 	return o;
 }

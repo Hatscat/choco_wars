@@ -9,7 +9,7 @@ function init_events () {
 }
 
 function on_beforeunload () {
-    // save data
+    storage.save();
 }
 
 function on_mouse_down (evnt) {
