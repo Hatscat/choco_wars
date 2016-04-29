@@ -51,6 +51,11 @@ function shuffle (o) {
 	return o;
 }
 
+function reorder_index_0 (array, value) {
+    var i = array.indexOf(value);
+    return i != -1 ? [value].concat(array.slice(0, i), array.slice(i)) : null;
+}
+
 function wait (container, prop_name_to_test, prop_value, time, next) {
 	if (container[prop_name_to_test] == prop_value) {
 		next();

@@ -4,6 +4,7 @@ function get_2d_ctx (canvas, text_align, font, font_size) {
     var ctx = canvas.getContext("2d");
     ctx.textAlign = (text_align & config.ALIGN_H) ? "center" : "left";
     ctx.textBaseline = (text_align & config.ALIGN_V) ? "middle" : "top";
+    ctx.lineWidth = 1;
     if (window.W)
         ctx.font = ((font_size || config.font_size) * W) + "px " + (font || config.font);
     return ctx;
@@ -19,6 +20,8 @@ function button_sprite (w, h, color, text) {
     ctx.fillRect(0, 0, w, h);
     ctx.fillStyle = "#000";
     ctx.fillText(text, w * 0.5, h * 0.5);
+    ctx.strokeStyle = "#888";
+    ctx.strokeRect(0, 0, w - ctx.lineWidth, h - ctx.lineWidth);
 
     return canvas;
 }

@@ -15,7 +15,7 @@ function Button (layer, x, y, w, h, up_color, down_color, text, click_cb) {
     this.sprite_up = null;
     this.sprite_down = null;
 
-    this.on_resize(true);
+    this.on_resize();
     this.sprite = this.sprite_up;
 
     mouse.on_down_cbs[mouse.on_down_cbs.length] = this.on_down.bind(this);
@@ -26,7 +26,6 @@ function Button (layer, x, y, w, h, up_color, down_color, text, click_cb) {
 Button.prototype.is_active = function () {
     return struct.layers_order[0] == this.layer;
 };
-
 
 Button.prototype.is_targeted = function () {
     return this.is_active() && is_point_inside_box(mouse, this.box);
@@ -45,9 +44,7 @@ Button.prototype.on_up = function () {
     this.click_cb();
 };
 
-Button.prototype.on_resize = function (force) {
-    if (!force && !this.is_active())
-        return;
+Button.prototype.on_resize = function () {
     this.box = { x: this.x * W, y: this.y * H, w: this.w * W, h: this.h * H };
     this.sprite = this.sprite_up = button_sprite(this.box.w, this.box.h, this.up_color, this.text);
     this.sprite_down = button_sprite(this.box.w, this.box.h, this.down_color, this.text);

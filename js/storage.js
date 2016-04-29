@@ -16,7 +16,7 @@ storage.load = function () {
         }
     }
     return storage.data;
-}
+};
 
 storage.save = function (data) {
     if (!data && !storage.data)
@@ -33,5 +33,5 @@ storage.save = function (data) {
     }
     localStorage.choco_wars = data_json;
     return true;
-}
+};
 
