@@ -12,6 +12,12 @@ window.config = {
     },
     api_url: "localhost",
     ALIGN_H: 1,
-    ALIGN_V: 1 << 1
-
+    ALIGN_V: 1 << 1,
+    VAR_ID: {
+        PROD: 1,
+        PRICE: 2,
+        PROMO: 3,
+        PLACE: 4,
+        FIN: 5
+    }
 };

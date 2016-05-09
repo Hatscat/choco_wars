@@ -23,6 +23,6 @@ Label.prototype.is_active = function () {
 };
 
 Label.prototype.on_resize = function () {
-    this.sprite = label_sprite(this.w * W, this.h * H, this.text_color, this.text, this.text_align, this.font, this.font_size);
+    this.sprite = label_sprite(this.sprite, this.w * W, this.h * H, this.text_color, this.text, this.text_align, this.font, this.font_size);
 };
 

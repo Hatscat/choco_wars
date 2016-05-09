@@ -8,6 +8,7 @@ function main () {
     window.ctx = get_2d_ctx(buffer_canvas);
     window.time = 0;
     window.on_resize_cbs = [];
+    window.on_update_cbs = [];
     on_resize();
     window.mouse = {
         x: 0,
@@ -17,6 +18,7 @@ function main () {
         on_up_cbs: [],
         on_move_cbs: []
     };
+    window.gvalues = {};
     window.struct = get_structure();
 
     storage.load();
@@ -28,6 +30,7 @@ function loop (t) {
     window.deltatime = t - time;
     time = t;
 
+    on_update();
     update();
     draw();
     requestAnimationFrame(loop);

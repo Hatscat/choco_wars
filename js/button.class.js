@@ -46,7 +46,7 @@ Button.prototype.on_up = function () {
 
 Button.prototype.on_resize = function () {
     this.box = { x: this.x * W, y: this.y * H, w: this.w * W, h: this.h * H };
-    this.sprite = this.sprite_up = button_sprite(this.box.w, this.box.h, this.up_color, this.text);
-    this.sprite_down = button_sprite(this.box.w, this.box.h, this.down_color, this.text);
+    this.sprite = this.sprite_up = button_sprite(this.sprite_up, this.box.w, this.box.h, this.up_color, this.text);
+    this.sprite_down = button_sprite(this.sprite_down, this.box.w, this.box.h, this.down_color, this.text);
 };
 
