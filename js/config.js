@@ -18,6 +18,9 @@ window.config = {
         PRICE: 2,
         PROMO: 3,
         PLACE: 4,
-        FIN: 5
+        FIN: 5,
+        COST: 6,
+        FIN_PREV: 7,
+        FIN_DETAILS: 8
     }
 };

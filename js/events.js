@@ -33,7 +33,6 @@ function on_mouse_up (evnt) {
 
 function on_mouse_move (evnt) {
     update_mouse_coord(evnt);
-    //console.log(evnt.touches[0].clientX, mouse.x, mouse.is_down)
 
     for (var i = 0; i < mouse.on_move_cbs.length; i++)
         mouse.on_move_cbs[i](evnt);
@@ -58,5 +57,4 @@ function update_mouse_coord (evnt) {
     mouse.x = evnt.clientX || evnt.touches && evnt.touches[0].clientX;
     mouse.y = evnt.clientY || evnt.touches && evnt.touches[0].clientY;
 }
-
 

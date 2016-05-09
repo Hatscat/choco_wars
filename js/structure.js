@@ -48,8 +48,8 @@ function get_structure () {
                     new Value("strategy", config.VAR_ID.PLACE, 16/20, 0.575, 4/20, 0.1, "#417", config.ALIGN_H | config.ALIGN_V),
 
                     new Label("strategy", "Finances", 1/20, 0.7, 1, 0.1, "#111", config.ALIGN_V),
-                    new Value("strategy", config.VAR_ID.FIN, 7/20, 0.7, 9/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
-                    new Value("strategy", config.VAR_ID.FIN, 16/20, 0.7, 4/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
+                    new Value("strategy", config.VAR_ID.FIN_DETAILS, 7/20, 0.7, 9/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
+                    new Value("strategy", config.VAR_ID.FIN_PREV, 16/20, 0.7, 4/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
 
                     new Button("strategy", 0.2, 0.85, 0.6, 0.1, "#fff", "#ccc", "Submit", console.log)
                 ]

@@ -18,7 +18,7 @@ function main () {
         on_up_cbs: [],
         on_move_cbs: []
     };
-    window.gvalues = {};
+    window.gvalues = { 4:0, 5: 10000 };
     window.struct = get_structure();
 
     storage.load();
@@ -28,7 +28,7 @@ function main () {
 
 function loop (t) {
     window.deltatime = t - time;
-    time = t;
+    time = t % 0xfffffff;
 
     on_update();
     update();
