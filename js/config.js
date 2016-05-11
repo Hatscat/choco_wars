@@ -3,7 +3,7 @@
 window.config = {
     font: "Arial",
     title_font: "Impact",
-    font_size: 0.05,
+    font_size: 0.04,
     title_font_size: 0.15,
     bg_colors: {
         strategy: ["#ccf", "#bbe"],

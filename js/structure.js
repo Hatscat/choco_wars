@@ -30,7 +30,6 @@ function get_structure () {
                     new Button("strategy", 1/3, 0, 1/3, 0.15, config.bg_colors.board[1], config.bg_colors.board[1], "Board", goto_board),
                     new Button("strategy", 2/3, 0, 1/3, 0.15, config.bg_colors.performances[1], config.bg_colors.performances[0], "Performances", goto_perfs),
                     /* ******** */
-                    //new Label("strategy", "Annual Budget", 0, 0.2, 1, 0.1, "#222", config.ALIGN_H | config.ALIGN_V, config.title_font),
                     new Label("strategy", "Prod. Quality", 1/20, 0.2, 1, 0.1, "#711", config.ALIGN_V),
                     new Slider("strategy", config.VAR_ID.PROD, 7/20, 0.2, 9/20, 0.1, 0.01, 0, 100, "#ebb"),
                     new Value("strategy", config.VAR_ID.PROD, 16/20, 0.2, 4/20, 0.1, "#711", config.ALIGN_H | config.ALIGN_V),
@@ -51,7 +50,7 @@ function get_structure () {
                     new Value("strategy", config.VAR_ID.FIN_DETAILS, 7/20, 0.7, 9/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
                     new Value("strategy", config.VAR_ID.FIN_PREV, 16/20, 0.7, 4/20, 0.1, "#111", config.ALIGN_H | config.ALIGN_V),
 
-                    new Button("strategy", 0.2, 0.85, 0.6, 0.1, "#fff", "#ccc", "Submit", console.log)
+                    new Button("strategy", 0.15, 0.85, 0.7, 0.125, "#eff", "#cdd", "Submit", console.log)
                 ]
             },
             board: {
